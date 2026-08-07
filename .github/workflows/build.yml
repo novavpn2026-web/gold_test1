@@ -16,7 +16,6 @@ jobs:
         with:
           python-version: '3.10'
 
-      # اضافه کردن جاوا (برای کامپایل اندروید و Gradle حیاتی است)
       - name: Set up Java JDK
         uses: actions/setup-java@v4
         with:
@@ -29,7 +28,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build APK with Flet
-        run: flet build apk
+        run: echo "y" | flet build apk
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
